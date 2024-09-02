@@ -22,11 +22,18 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Description Backend Development (NestJS)
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+**Event Management API** - A backend solution developed using [NestJS](https://nestjs.com/) and [PostgreSQL](https://www.postgresql.org/) for efficiently managing event data. This project provides a RESTful API with endpoints for creating, reading, updating, and deleting event records. It also includes basic validation and error handling to ensure data integrity and user input correctness.
 
-## Project setup
+## Project Setup
+
+To set up the project, follow these steps:
+
+1. **Install Dependencies:**
+
+   ```bash
+   npm install
 
 ```bash
 $ npm install
@@ -58,6 +65,45 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# Events API Endpoints
+
+## 1. Create Event
+
+- **Method:** `POST`
+- **Endpoint:** `/events`
+- **Returns:** `Event` object with `201 Created` status.
+
+## 2. Get All Events
+
+- **Method:** `GET`
+- **Endpoint:** `/events`
+- **Query Parameters:** Optional filters (`category`, `location`, `date`, `price`, `limit`, `offset`)
+- **Returns:** Array of `Event` objects with `200 OK` status.
+
+## 3. Get Single Event
+
+- **Method:** `GET`
+- **Endpoint:** `/events/:id`
+- **Returns:** `Event` object with `200 OK` status.
+
+## 4. Update Event
+
+- **Method:** `PUT`
+- **Endpoint:** `/events/:id`
+- **Returns:** Updated `Event` object with `200 OK` status.
+
+## 5. Partial Update Event
+
+- **Method:** `PATCH`
+- **Endpoint:** `/events/:id`
+- **Returns:** Updated `Event` object with `200 OK` status.
+
+## 6. Delete Event
+
+- **Method:** `DELETE`
+- **Endpoint:** `/events/:id`
+- **Returns:** `204 No Content` status.
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:
@@ -69,16 +115,6 @@ Check out a few resources that may come in handy when working with NestJS:
 - Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
